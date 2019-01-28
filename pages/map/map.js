@@ -1,6 +1,6 @@
 // pages/map/map.js
 import api from '../../utils/api.js'
-// import QQMapWX from '../../utils/qqmap-wx-jssdk.js';
+// import QQMapWX from '../../utils/map.js';
 // const qqmapsdk = new QQMapWX({
 //   key: 'ZOUBZ-AJGKU-KZRVO-BFSFF-W4BYV-TWB2J' // 必填
 // });
