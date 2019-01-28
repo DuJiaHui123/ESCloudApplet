@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+  <view><van-dialog id="van-dialog" /></view>
+</view>

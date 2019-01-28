@@ -1,0 +1,17 @@
+<!--pages/account/SignIn.wxml-->
+<view class='login'>
+  <image src="{{bgJpg}}" class='loginfirst-img'></image>
+  <view class='login-content'>
+    <view class='login-banner'>
+      <image src="{{logoPng}}"></image>
+    </view>
+    <view class='login-account'>
+      <van-cell-group>
+        <van-field value="{{ mobile }}" label="账户" placeholder="请输入手机号" required bind:change="changeMobile" />
+        <van-field value="{{ password  }}" label="密码" placeholder="请输入正确的密码" required type="password" bind:change="changePassword" />
+      </van-cell-group>
+      <van-button size="large" class='button-large' bind:click="clickLogin">登录</van-button>
+      <van-toast id="van-toast" />
+    </view>
+  </view>
+</view>

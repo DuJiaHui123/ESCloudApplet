@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/map/map",
+    "pages/inspection/inspection",
+    "pages/repair/repair",
+    "pages/account/SignIn"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#5A8FF2",
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "站点",
+        "iconPath": "static/img/home.png",
+        "selectedIconPath": "static/img/selectHome.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "static/img/map.png",
+        "selectedIconPath": "static/img/selectMap.png"
+      },
+      {
+        "pagePath": "pages/inspection/inspection",
+        "text": "巡检",
+        "iconPath": "static/img/inspectionUser.png",
+        "selectedIconPath": "static/img/selectinspectionUser.png"
+      },
+      {
+        "pagePath": "pages/repair/repair",
+        "text": "报修",
+        "iconPath": "static/img/repair.png",
+        "selectedIconPath": "static/img/selectRepair.png"
+      }
+    ]
+  }
+}
