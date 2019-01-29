@@ -1,1 +1,62 @@
 /**index.wxss**/
+.index-content{
+  padding: 20rpx 30rpx;
+  width: 100%;
+  position: relative;
+}
+.index-title{
+  font-size: 45rpx;
+  width: 92%;
+  height: 70rpx;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+.index-Box{
+  margin-top: 60rpx;
+}
+.index-contentBox{
+  width: 92%;
+  height: 250rpx;
+  /* background-color: red; */
+  position: relative;
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+  background-color: #ADD8E6;
+}
+.box-img{
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  line-height: 315rpx;
+}
+.box-img image{
+  width: 55%;
+  height: 35%;
+}
+.box-content{
+  width: 56%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  line-height: 60rpx;
+  font-size: 33rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.box-footer{
+  width: 24%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0; 
+  text-align: center;
+  line-height: 250rpx;
+}
+.box-footer .icon-jiantou{
+  font-size: 40px;
+  position: absolute;
+  right: 10rpx;
+  color: gray;
+}
