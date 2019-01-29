@@ -6,10 +6,26 @@
 
   Page({
     data: {
-
+      show: true,
+      areaAll: {
+        province_list: {
+          110000: '北京市'
+        },
+        city_list: {
+          110100: '北京市'
+        },
+        county_list: {
+          110101: '东城区',
+          110102: '西城区',
+          110105: '朝阳区',
+          110106: '丰台区'
+        }
+      }
     },
     onLoad: function() {
+      console.log(this.data.areaAll);
       this.getUser();
+      // this.getArea();
       var token = wx.getStorageSync('token');
       if (!token) {
         Dialog.alert({
@@ -29,6 +45,19 @@
         method: 'GET',
         success: function(res) {
           console.log(res.data)
+        }
+      })
+    },
+    getArea() {
+      var that = this;
+      api({
+        url: '/area/all',
+        method: 'GET',
+        success: function (res) {
+          console.log(res.data)
+          that.setData({
+            areaAll: res.data
+          });
         }
       })
     }

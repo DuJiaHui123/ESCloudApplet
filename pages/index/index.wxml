@@ -1,4 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <view><van-dialog id="van-dialog" /></view>
+  <view>
+  <van-popup show="{{ show }}" position="bottom" bind:close="onClose">
+    <van-area area-list="{{ areaAll }}" />
+  </van-popup>
+  </view>
+  <!-- <view><van-dialog id="van-dialog" /></view> -->
 </view>
