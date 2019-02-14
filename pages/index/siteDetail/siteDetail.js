@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    boolean: false,
+    showState: false,
+    deviceList: []
   },
 
   /**
@@ -14,10 +16,10 @@ Page({
    */
   onLoad: function (options) {
     const { id } = options;
-    console.log(id);
-    this.getUser(id);
+    this.siteDetail(id);
   },
-  getUser(id) {
+  siteDetail(id) {
+    var that = this;
     api({
       url: '/device/getBySiteId',
       method: 'GET',
@@ -26,6 +28,12 @@ Page({
       },
       success: function (res) {
         console.log(res.data)
+        if(res.data.length != 0){
+          that.setData({
+            boolean: true,
+            deviceList: res.data
+          })
+        }
       }
     })
   }

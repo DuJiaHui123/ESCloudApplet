@@ -1,1 +1,54 @@
 /* pages/index/siteDetail.wxss */
+.siteDetailNo{
+  width: 100%;
+  height: 100vh;
+}
+.siteDetailNo-text{
+  text-align: center;
+  margin-top: 44vh;
+}
+.siteDetail-title text{
+  position: relative;
+  left: 1rem;
+}
+.siteDetail-content{
+  width: 8.5rem;
+  height: 9.66rem;
+  background-color: #ADD8E6;
+  display: inline-block;
+  border-radius: 20rpx;
+  margin: 1rem 0rem 0rem 1rem;
+}
+.content-box{
+  width: 85%;
+  height: 85%;
+  /* background-color: gray; */
+  margin: 25rpx auto;
+  position: relative;
+}
+.content-logo{
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: gainsboro;
+  border-radius: 50%;
+}
+.content-logo image{
+  width: 65%;
+  height: 65%;
+  margin: 0.4rem;
+}
+.content-state{
+  position: absolute;
+  right: 8rpx;
+  top: 0;
+}
+.content-text{
+  margin-top: 0.5rem;
+}
+.icon-banshou{
+  position: absolute;
+  right: 8rpx;
+  bottom: 0;
+  font-size: 40px;
+  color: #FFA500;
+}
