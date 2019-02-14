@@ -15,7 +15,7 @@
       bgJpg: '../../static/img/spacechose.png'
     },
     onLoad: function() {
-      // this.getUser();
+      this.getUser();
       this.getArea();
       this.getSite();
       var token = wx.getStorageSync('token');
@@ -31,15 +31,15 @@
       }
     },
     // 获取人员(测试)
-    // getUser() {
-    //   api({
-    //     url: '/user/test',
-    //     method: 'GET',
-    //     success: function(res) {
-    //       // console.log(res.data)
-    //     }
-    //   })
-    // },
+    getUser() {
+      api({
+        url: '/user/test',
+        method: 'GET',
+        success: function(res) {
+          // console.log(res.data)
+        }
+      })
+    },
     // 获取区域
     getArea() {
       var that = this;
@@ -48,7 +48,6 @@
         city_list: {},
         county_list: {}
       };
-      // var all = { id:1, name: "所有站点" };
       api({
         url: '/area/getOpen',
         method: 'GET',
@@ -56,15 +55,34 @@
           const { data } = res
           data.map(p => {
             areaAll.province_list[p.id] = p.name
-            p.children.map(c => {
-              areaAll.city_list[c.id] = c.name
-              c.children.map(a => {
-                areaAll.county_list[a.id] = a.name
+              p.children.map(c => {
+                areaAll.city_list[c.id] = c.name
+                c.children.map(a => {
+                  areaAll.county_list[a.id] = a.name
               })
             })
-          })
+          });
+          console.log(areaAll);
+          areaAll.province_list['000000'] = "所有站点";
+          // var arr = [];
+          // for (let i in areaAll.province_list) {
+          //   let o = {};
+          //   o[i] = areaAll.province_list[i];
+          //   arr.push(o);
+          // }
+          // var obj = {};
+          // obj['000000'] = "所有站点"
+          // arr.unshift(obj);
+          // console.log(arr);
+          
+          // // areaAll.province_list = 
+          // for (let i = 0;i < arr.length; i++) {
+          //   console.log(arr[i])
+          // }
           that.setData({
             areaList: areaAll
+          }, ()=> {
+            console.log(that.data.areaList);
           })
         }
       })
@@ -99,9 +117,20 @@
       })
     },
     areaConfirm(e) {
+      console.log(e);
       var areaName = {}
       const { detail } = e;
       const { values } = detail;
+      if (!values[2]) {
+        this.areaCancel();
+        this.setData({
+          boolean: false,
+          area: ''
+        }, ()=> {
+          this.getSite();
+        });
+        return;
+      }
       var area = Number(values[values.length - 1].code);
       areaName.provinceName = values[0].name;
       areaName.cityName = values[1].name;
