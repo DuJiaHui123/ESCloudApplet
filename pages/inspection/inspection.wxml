@@ -1,2 +1,4 @@
 <!--pages/inspection/inspection.wxml-->
-<text>pages/inspection/inspection.wxml</text>
+<view class="index-moble">
+  <van-dialog id="van-dialog" />
+</view>

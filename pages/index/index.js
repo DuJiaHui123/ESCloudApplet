@@ -15,7 +15,7 @@
       bgJpg: '../../static/img/spacechose.png'
     },
     onLoad: function() {
-      this.getUser();
+      // this.getUser();
       this.getArea();
       this.getSite();
       var token = wx.getStorageSync('token');
@@ -31,15 +31,15 @@
       }
     },
     // 获取人员(测试)
-    getUser() {
-      api({
-        url: '/user/test',
-        method: 'GET',
-        success: function(res) {
-          // console.log(res.data)
-        }
-      })
-    },
+    // getUser() {
+    //   api({
+    //     url: '/user/test',
+    //     method: 'GET',
+    //     success: function(res) {
+    //       // console.log(res.data)
+    //     }
+    //   })
+    // },
     // 获取区域
     getArea() {
       var that = this;
@@ -62,7 +62,7 @@
               })
             })
           });
-          console.log(areaAll);
+          // console.log(areaAll);
           areaAll.province_list['000000'] = "所有站点";
           // var arr = [];
           // for (let i in areaAll.province_list) {
@@ -82,7 +82,7 @@
           that.setData({
             areaList: areaAll
           }, ()=> {
-            console.log(that.data.areaList);
+            // console.log(that.data.areaList);
           })
         }
       })
@@ -153,5 +153,15 @@
         //目的页面地址
         url: './siteDetail/siteDetail?id=' + [e.currentTarget.id],
       })
+    },
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow: function () {
+      this.getSite();
+      var token = wx.getStorageSync('token');
+      if (token) {
+        Dialog.close();
+      }
     }
   })

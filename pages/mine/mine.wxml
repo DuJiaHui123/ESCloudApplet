@@ -15,4 +15,7 @@
     <van-cell title="消息中心" is-link url="/pages/dashboard/index" /> 
     <van-cell title="退出登录" is-link url="/pages/dashboard/index" /> 
   </view> 
+  <view class="index-moble">
+    <van-dialog id="van-dialog" />
+  </view>
 </view>

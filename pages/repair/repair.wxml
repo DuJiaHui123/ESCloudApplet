@@ -1,2 +1,4 @@
 <!--pages/repair/repair.wxml-->
-<text>pages/repair/repair.wxml</text>
+<view class="index-moble">
+  <van-dialog id="van-dialog" />
+</view>

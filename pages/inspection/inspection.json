@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "巡检"
+  "navigationBarTitleText": "巡检",
+  "usingComponents": {
+    "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index"
+  }
 }
