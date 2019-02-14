@@ -4,7 +4,8 @@
     "pages/map/map",
     "pages/inspection/inspection",
     "pages/repair/repair",
-    "pages/account/SignIn"
+    "pages/account/SignIn",
+    "pages/index/siteDetail/siteDetail"
   ],
   "permission": {
     "scope.userLocation": {

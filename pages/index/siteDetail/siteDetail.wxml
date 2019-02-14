@@ -1,0 +1,21 @@
+<!--pages/index/siteDetail.wxml-->
+<view class='siteDetailYes' wx:if="{{boolean}}">
+  <view class='siteDetail-title'>
+    <text>{{deviceList[0].siteName}}</text>
+  </view>
+  <view class='siteDetail-content' wx:for="{{deviceList}}" wx:key="{{deviceList.deviceId}}">
+    <view class='content-box'>
+      <view class='content-logo'>
+        <image src='../../../static/img/链接.png'></image>
+      </view>
+      <view class='content-state' wx:if="{{showState}}">在线</view>
+      <view class='content-state' wx:else>离线</view>
+      <view class='content-text'>{{item.name}}</view>
+      <view class='content-text'>型号：{{item.model}}</view>
+      <view class='iconfont icon-banshou'></view>
+    </view>
+  </view>
+</view>
+<view class='siteDetailNo' wx:else>
+  <view class='siteDetailNo-text'>当前没有数据</view>
+</view>

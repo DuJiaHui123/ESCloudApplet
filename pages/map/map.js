@@ -29,6 +29,12 @@ Page({
       },
     })
   },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    this.getSearch();
+  },
   getSearch() {
     const { markers } = this.data;
     var that = this;
