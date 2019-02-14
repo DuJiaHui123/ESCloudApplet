@@ -29,7 +29,7 @@
 .content-logo{
   width: 2.5rem;
   height: 2.5rem;
-  background-color: gainsboro;
+  background-color: gray;
   border-radius: 50%;
 }
 .content-logo image{

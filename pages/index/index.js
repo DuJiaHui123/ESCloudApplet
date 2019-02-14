@@ -15,7 +15,7 @@
       bgJpg: '../../static/img/spacechose.png'
     },
     onLoad: function() {
-      this.getUser();
+      // this.getUser();
       this.getArea();
       this.getSite();
       var token = wx.getStorageSync('token');
@@ -31,15 +31,15 @@
       }
     },
     // 获取人员(测试)
-    getUser() {
-      api({
-        url: '/user/test',
-        method: 'GET',
-        success: function(res) {
-          // console.log(res.data)
-        }
-      })
-    },
+    // getUser() {
+    //   api({
+    //     url: '/user/test',
+    //     method: 'GET',
+    //     success: function(res) {
+    //       // console.log(res.data)
+    //     }
+    //   })
+    // },
     // 获取区域
     getArea() {
       var that = this;
