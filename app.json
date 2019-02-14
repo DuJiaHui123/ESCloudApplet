@@ -5,7 +5,8 @@
     "pages/inspection/inspection",
     "pages/repair/repair",
     "pages/account/SignIn",
-    "pages/index/siteDetail/siteDetail"
+    "pages/index/siteDetail/siteDetail",
+    "pages/mine/mine"
   ],
   "permission": {
     "scope.userLocation": {
@@ -46,6 +47,12 @@
         "text": "报修",
         "iconPath": "static/img/repair.png",
         "selectedIconPath": "static/img/selectRepair.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/img/user.png",
+        "selectedIconPath": "static/img/selectUser.png"
       }
     ]
   }
