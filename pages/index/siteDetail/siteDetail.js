@@ -27,7 +27,6 @@ Page({
         siteId: id
       },
       success: function (res) {
-        console.log(res.data)
         if(res.data.length != 0){
           that.setData({
             boolean: true,

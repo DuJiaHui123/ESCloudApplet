@@ -120,7 +120,6 @@
       })
     },
     toSiteDetail(e) {
-      console.log(111)
       wx.navigateTo({
         //目的页面地址
         url: './siteDetail/siteDetail?id=' + [e.currentTarget.id],
