@@ -1,4 +1,21 @@
-<!--pages/inspection/inspection.wxml-->
+<view class='inspection'>
+  <view class='inspection-title'>
+    <text>巡检记录</text>
+  </view>
+  <view class='inspection-content'>
+    <view class='inspection-box' wx:for="{{inspectionList}}" wx:key="{{inspectionList.id}}" data-id='{{item.id}}' id='{{item.id}}'>
+      <view class='box-header'>
+        <text class='header-user text-posider'><text class='iconfont icon-user'></text>{{item.inspectorName}}</text>
+        <text class='header-time text-poside'>{{item.realDate}}</text>
+      </view>
+      <view class='box-content'>
+        <view class='text-posider'>{{item.typeName}}</view>
+        <view class='text-posider'>{{item.siteName}}</view>
+        <view class='text-posider'>{{item.address}}</view>
+      </view>
+    </view>
+  </view>
+</view>
 <view class="index-moble">
   <van-dialog id="van-dialog" />
 </view>

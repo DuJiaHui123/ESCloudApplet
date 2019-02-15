@@ -1,7 +1,11 @@
 {
   "navigationBarTitleText": "巡检",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
   "usingComponents": {
     "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index",
-    "van-popup": "/miniprogram_npm/vant-weapp/popup/index"
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-panel": "/miniprogram_npm/vant-weapp/panel/index"
   }
 }

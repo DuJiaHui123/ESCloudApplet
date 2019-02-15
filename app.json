@@ -1,16 +1,16 @@
 {
   "pages":[
+    "pages/inspection/inspection",
+    "pages/account/SignIn",
     "pages/index/index",
     "pages/map/map",
-    "pages/inspection/inspection",
     "pages/repair/repair",
-    "pages/account/SignIn",
-    "pages/index/siteDetail/siteDetail",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/index/siteDetail/siteDetail"
   ],
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序位置接口的效果展示我"
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
   },
   "window":{

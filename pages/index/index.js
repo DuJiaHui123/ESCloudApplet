@@ -62,7 +62,6 @@
               })
             })
           });
-          // console.log(areaAll);
           areaAll.province_list['000000'] = "所有站点";
           // var arr = [];
           // for (let i in areaAll.province_list) {
@@ -81,8 +80,6 @@
           // }
           that.setData({
             areaList: areaAll
-          }, ()=> {
-            // console.log(that.data.areaList);
           })
         }
       })
@@ -117,7 +114,6 @@
       })
     },
     areaConfirm(e) {
-      console.log(e);
       var areaName = {}
       const { detail } = e;
       const { values } = detail;
