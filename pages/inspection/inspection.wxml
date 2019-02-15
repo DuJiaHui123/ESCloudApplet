@@ -1,7 +1,7 @@
 <view class='inspection'>
-  <view class='inspection-title'>
+  <!-- <view class='inspection-title'>
     <text>巡检记录</text>
-  </view>
+  </view> -->
   <view class='inspection-content'>
     <view class='inspection-box' wx:for="{{inspectionList}}" wx:key="{{inspectionList.id}}" bindtap='toInspectionDetail' data-id='{{item.id}}' id='{{item.id}}'>
       <view class='box-header'>

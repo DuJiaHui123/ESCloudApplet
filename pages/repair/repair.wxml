@@ -2,3 +2,20 @@
 <view class="index-moble">
   <van-dialog id="van-dialog" />
 </view>
+<view class='repair'>
+  <view class='repair-list'>
+    <view class='repair-item' wx:for="{{repairList}}" wx:for-item="item" wx:key="unique">
+      <view class="item-status {{REPAIR_STATUS_CLASSNAME[item.status]}}">
+        <text>{{REPAIR_STATUS[item.status]}}</text>
+      </view>
+      <view class='item-content'>
+        <view class='item-code'>
+          <text>{{item.code}}</text>
+          <text class='item-time'>{{item.createDate}}</text>
+        </view>
+        <view class='item-text'>{{item.description}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='repair-loadAll'>已经加载完全部~</view> -->
+</view>

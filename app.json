@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/inspection/inspection",
     "pages/account/SignIn",
     "pages/index/index",
     "pages/map/map",
+    "pages/inspection/inspection",
     "pages/repair/repair",
     "pages/mine/mine",
     "pages/index/siteDetail/siteDetail",

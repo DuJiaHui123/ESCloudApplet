@@ -1,5 +1,6 @@
 // pages/inspection/inspectionDetail/inspectionDetail.js
-import api from '../../../utils/api.js'
+import api from '../../../utils/api.js';
+var moment = require('../../../utils/util.js');
 Page({
 
   /**
@@ -27,7 +28,6 @@ Page({
         inspectionId: id
       },
       success: function (res) {
-        console.log(res.data);
         const { data } = res;
         const { items } = data;
         that.setData({
@@ -45,7 +45,7 @@ Page({
         id: id
       },
       success: function (res) {
-        console.log(res.data);
+        res.data.realDate = moment.formatTime(res.data.realDate, 'Y-M-D')
         that.setData({
           inspectiononeDetail: res.data
         });

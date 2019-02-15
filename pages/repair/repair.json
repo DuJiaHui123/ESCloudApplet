@@ -1,5 +1,7 @@
 {
-  "navigationBarTitleText": "报修",
+  "navigationBarTitleText": "报修记录",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
   "usingComponents": {
     "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index",
     "van-popup": "/miniprogram_npm/vant-weapp/popup/index"

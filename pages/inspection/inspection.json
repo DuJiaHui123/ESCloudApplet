@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "巡检",
+  "navigationBarTitleText": "巡检记录",
   "onReachBottomDistance": 50,
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",
