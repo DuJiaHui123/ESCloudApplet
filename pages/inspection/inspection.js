@@ -116,5 +116,11 @@ Page({
       return;
     }
     this.getInspectionList(2);
+  },
+  toInspectionDetail(e) {
+    wx.navigateTo({
+      //目的页面地址
+      url: './inspectionDetail/inspectionDetail?id=' + [e.currentTarget.id],
+    })
   }
 })

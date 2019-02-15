@@ -1,0 +1,28 @@
+<!--pages/inspection/inspectionDetail/inspectionDetail.wxml-->
+<view class='inspectionDetail'>
+  <view class='inspectionDetail-content'>
+    <view class='inspectionDetail-box'>
+      <view class='box-header'>
+        <text class='header-user text-posider'><text class='iconfont icon-user'></text>{{inspectiononeDetail.inspectorName}}</text>
+        <text class='header-time text-poside'>{{inspectiononeDetail.realDate}}</text>
+      </view>
+      <view class='box-content'>
+        <view class='text-posider'>{{inspectiononeDetail.typeName}}</view>
+        <view class='text-posider'>{{inspectiononeDetail.siteName}}</view>
+        <view class='text-posider'>{{inspectiononeDetail.address}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='inspectionDetail-tabs'>
+    <van-tabs swipeable>
+      <van-tab title="巡检内容">
+        <van-cell-group wx:for="{{inspectionDetail}}" wx:key="{{inspectionDetail.id}}">
+          <van-cell
+            title="{{item.content}}"
+            value="{{item.result}}"
+          />
+        </van-cell-group>
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

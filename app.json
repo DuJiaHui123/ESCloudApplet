@@ -6,7 +6,8 @@
     "pages/map/map",
     "pages/repair/repair",
     "pages/mine/mine",
-    "pages/index/siteDetail/siteDetail"
+    "pages/index/siteDetail/siteDetail",
+    "pages/inspection/inspectionDetail/inspectionDetail"
   ],
   "permission": {
     "scope.userLocation": {
